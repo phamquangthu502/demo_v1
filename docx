@@ -1,0 +1,279 @@
+
+TA:
+●introduce yourself, projects
+●Authentication, Authorization
+Spring:
+●IOC vs DI
+●bean initialization: injection types
+●@Qualifier
+Java core:
+●OOP concepts
+●array vs ArrayList
+●overriding and overloading
+●Java 8:
+oWhat’s new in java 8
+oFunctional interface
+oStream: intermediate and terminate, stream and parallel stream
+Database:
+oJoin types
+oQuery to select largest number->second largest number->second largest number in case there are some records with same value
+
+TA: 
+●introduce yourself, projects
+●4 feature of oop
+Java core:
+●4 feature of oop
+●Compare 2 object
+●Difference between list vs arraylist
+Database:
+●Join types
+●Index
+●Get max value of column
+●limit
+	
+
+
+Phỏng vấn tháng 6:
+
+1. Có biết về Exception k?	3
+2. Em có biết immutable k?	3
+3. Phân việt @PathVariable và @RequestParam	3
+4.Những lưu ý khi dùng GROUP BY trong DB	3
+5. Order by:	4
+6. Having	4
+6. Làm nào để select ra những record k trùng nhau. Ví dụ 1 bảng có id, name, age: select ra thằng tất cả thẳng record mà có name k trùng nhau	4
+7. Làm nào để select ra những thằng có tuổi lớn hơn 21 mà ko dùng mệnh đề WHERE trong SQL	4
+8. Có các số từ 1 đến 100 nhưng thiếu 1 số được ném vào mảng k sắp xếp, tìm số đó.	4
+9. LinkedList làm thế nào để xóa node thứ 5	4
+10. LinkedList làm thế nào để thay đổi node ban đầu của nó.	4
+11. Tìm các phần từ trùng lặp trong mảng	5
+12. Garbage Collection trong java	5
+13. Finally	5
+14. Có cách nào closed source ko dùng Finally ko?	5
+15. Làm thế nào để tránh NullPointerException khi truyền param object vào method.	6
+16. Phân biệt Inner Join với Left Join.	6
+17. Làm thế nào để Map địa chỉ link với Class.	6
+18. Biết CASE trong SQL k?	6
+19.  4 tính chất OOP. 	 - Abstraction -  Encapsulation - Inheritance - Polymorphism	6
+2. phân biệt String, Stringbuilder, String Buffer 	 	6
+3. so sánh 2 String 	| - Dùng compareTo() if str1 > str2  thì trả về 1 ngược lại thì -1 và bằng thì trả về 0 - Dùng equal() hoặc equalsIgnoreCase() trả về kiểu boolean -  Dùng hashCode() nếu 2 string bằng nhau thì hashcode sẽ bằng nhau	7
+5. phân biệt overload và override -Overload là mình sẽ ghi đè phương thức sẽ ghi lại phương thức được khởi tạo ở lớp cha  ( Thể hiện tính kế thừa và đa hình) - Overrider là nạp chồng là có nhiều phương thức cùng tên, những phương thức sẽ khác tham số truyền vào hoặc kiểu trả về (Thể hiện tính đa hình)	7
+6. Khái niệm DI ? có mấy loại Inject 	 - DI(Dependency Injection) là nguyên lý để giảm sự phụ thuộc giữa các module gốm có 2 ý chính  + Các module cấp cao ko nên phụ thuộc trực tiếp vào module cấp thấp mà nên thông qua abstraction  + Abstraction ko nên phụ thuộc vào các chi tiết mà ngược lại - Có 2 loại inject  + Constructor based injection :  inject bằng constructor   + Setter based injection : inject bằng setter  	7
+7. Spring bean là gì? có bao nhiêu loại scope, default là gì? - Bean là một đối tượng được khởi tạo ,xây dựng và được quản lý bởi IoC Container hay có thể bảo là bean là module chính của chương trình tạo ra bởi Spring IoC container	7
+8. các loại join trong SQL? lấy ví dụ cụ thể về Left join? 	 - inner join - left join - right join - full outer join  	7
+9. khái niệm index trong SQL? có bao nhiêu loại index	7
+10. phân biệt Session và Cookie trong Servlet  	8
+Rest - Restful api	8
+Quan hệ các entity:	9
+PHÂN BIỆT POST GET	10
+PHÂN BIỆT POST PUT	10
+PHÂN BIỆT PUT PATCH:	11
+
+1. Có biết về Exception k? 
+-Exception là sự kiện xảy ra trong quá trình thực thi của Java program và nó phá vỡ cái flow của 1 chương trình và có thể làm chết chương trình nếu không được xử lý 
+2. Em có biết immutable k?
+-có thể hiểu như final là các đặc tính được tạo ra nhưng ko thể thay đổi được 
+3. Phân việt @PathVariable và @RequestParam
+-@PathVaribale dùng ở Controller  để lấy giá trị người dùng nhập trên URL nhưng ko theo dạng Key Value mà là 
+-@RequestParam để lấy giá trị của người dùng nhập trên URL nhưng theo dạng Key Value
+Example : có 1 link URL http://localhost:8080/MyApp/user/1234/invoices?date=12-05-2013
+ở trong controller ta sẽ set RequestMapping là /user/{user_id}/invoices
+như vậy
+ @PathVariable(“user_id”)  dùng để lấy user_id trên link nghĩa là 1234 tương ứng với lihk URL ”) d
+	@RequestParam(“dateùng để lấy tham số date truyền vào bằng URL tương ứng ở trên link 
+4.Những lưu ý khi dùng GROUP BY trong DB
+Mệnh đề GROUP BY trong SQL được sử dụng hợp tác với câu lệnh SELECT để sắp xếp dữ liệu giống nhau thành các nhóm. Mệnh đề GROUP BY này tuân theo mệnh đề WHERE trong câu lệnh SELECT và đứng trước mệnh đề ORDER BY.
+
+5.Order by:
+Mệnh đề ORDER BY trong SQL được sử dụng để sắp xếp dữ liệu theo thứ tự tăng dần hoặc giảm dần, dựa trên một hoặc nhiều cột. Một số cơ sở dữ liệu sắp xếp các kết quả truy vấn theo thứ tự tăng dần theo mặc định. Lệnh ASC được sử dụng để sắp xếp tăng dần và DESC được sử dụng để sắp xếp giảm dần.
+
+6.Having 
+Mệnh đề WHERE đặt các điều kiện vào các cột đã chọn, trong khi mệnh đề HAVING đặt các điều kiện vào các nhóm được tạo bởi mệnh đề GROUP BY
+
+Mệnh đề HAVING phải tuân theo mệnh đề GROUP BY trong truy vấn và cũng phải trước mệnh đề ORDER BY nếu sử dụng. Mã lệnh sau đây có cú pháp của câu lệnh SELECT bao gồm mệnh đề HAVING:
+
+=> thứ tự các mệnh đề:
+SELECT column1, column2
+FROM table1, table2
+WHERE [ conditions ]
+GROUP BY column1, column2
+HAVING [ conditions ]
+ORDER BY column1, column2
+
+6. Làm nào để select ra những record k trùng nhau. Ví dụ 1 bảng có id, name, age: select ra thằng tất cả thẳng record mà có name k trùng nhau
+-dùng distinct trong sql  SELECT DISTINCT name from table_name
+7. Làm nào để select ra những thằng có tuổi lớn hơn 21 mà ko dùng mệnh đề WHERE trong SQL
+-Dùng GROUP BY và HAVING 
+Select * from table_name 
+GROUP BY AGE
+HAVING AGE > 21
+8. Có các số từ 1 đến 100 nhưng thiếu 1 số được ném vào mảng k sắp xếp, tìm số đó.
+9. LinkedList làm thế nào để xóa node thứ 5
+-1 node trong linked list sẽ có data và next để chỉ đến node sau đó 
+-vậy thì mình sẽ lấy cái next của node thứ 4 ( hiện đang là 5) mình sẽ chuyển thành 6 ( còn nếu node thứ 5 nó đang trỏ đến null thì mình sẽ chuyền thành null) như vậy là mình đã xóa được node thứ 5
+10. LinkedList làm thế nào để thay đổi node ban đầu của nó.
+-Mình sẽ tạo ra 1 node có next trỏ đến node thứ 2 xong để Head trỏ để node ý 
+11. Tìm các phần từ trùng lặp trong mảng
+Ví dụ: [1,2,3, 2,3,1, 5,6,7] in ra số đó
+	
+	
+12. Garbage Collection trong java
+-Là phần dọn rác trong JVM dọn rác trong Heap memory nơi để lưu trữ các object được khởi tạo bằng từ khóa new và các biến static 
+-Dùng để dọn các referrence các object ở trong Heap mà đã lâu chưa được sử dụng để tiết kiệm vùng nhớ 
+13. Finally
+-được dùng có exception handling kết hợp với try catch  và là bước cuối cùng dù có có bắt exception ở catch hay ko thì đều sẽ chạy finally
+14. Có cách nào closed source ko dùng Finally ko?
+15. Làm thế nào để tránh NullPointerException khi truyền param object vào method.
+-mình có thể dùng exception handling (try-catch để check đầu vào trước)
+16. Phân biệt Inner Join với Left Join.
+-Inner join sẽ trả về tất cả các row mà các trường join ở 2 bảng đều không null 
+-Còn left join sẽ trả về các row mà các trường join ko null ở bảng thứ nhất 
+17. Làm thế nào để Map địa chỉ link với Class.
+-Dùng @RequestMapping
+18. Biết CASE trong SQL k? 
+-dùng để thể hiện 1 trường giá trị hiển thị như mong muốn của user
+	
+
+-------------------------------------------
+19.  4 tính chất OOP. 	
+- Abstraction
+-  Encapsulation
+- Inheritance
+- Polymorphism
+1.hỏi kĩ hơn về tính đóng gói và che giấu dữ liệu 	
+- Tính đóng gói : gói tất cả các thuộc tính, method của object vào trong 1 class có các phương thức Read-only và write-only (getter and setter)
+- Tính che giấu dữ liệu : Như kiểu xây dựng 1 cái sườn để các lớp con sẽ kế thừa và xây dựng từ cái sườn đó đi lên
+2.phân biệt String, Stringbuilder, String Buffer 	
+
+	String	StringBuffer	StringBuilder
+Định nghĩa	Là một chuỗi java để tạo đối tượng String, là một chuỗi các ký tự	Là một class để tạo đối tượng String có thể sửa đổi và đảm bảo an toàn cho các luồng 	Là một class để tạo ra đối tượng String có thể sửa đổi nhưng ko đảm bảo an toàn cho các luồng 
+Tính đột biến	là bất biến 	là một lớp có thể thay đổi	là một lớp có thể thay đổi 
+An toàn	an toàn	an toàn (Thread-safe) và còn đồng bộ hóa	ko an toàn và ko đồng bộ hóa 
+Hiệu quả	Nhanh 	Chậm	Rất nhanh
+
+3.so sánh 2 String 	|
+- Dùng compareTo() if str1 > str2  thì trả về 1 ngược lại thì -1 và bằng thì trả về 0
+- Dùng equal() hoặc equalsIgnoreCase() trả về kiểu boolean
+-  Dùng hashCode() nếu 2 string bằng nhau thì hashcode sẽ bằng nhau
+4.abstract class có constructor không?  phân biệt abstract class với interface (câu này rất quan trọng) 	
+5.phân biệt overload và override
+-Overload là mình sẽ ghi đè phương thức sẽ ghi lại phương thức được khởi tạo ở lớp cha  ( Thể hiện tính kế thừa và đa hình)
+- Overrider là nạp chồng là có nhiều phương thức cùng tên, những phương thức sẽ khác tham số truyền vào hoặc kiểu trả về (Thể hiện tính đa hình)
+6.Khái niệm DI ? có mấy loại Inject 	
+- DI(Dependency Injection) là nguyên lý để giảm sự phụ thuộc giữa các module gốm có 2 ý chính
+	+ Các module cấp cao ko nên phụ thuộc trực tiếp vào module cấp thấp mà nên thông qua abstraction
+	+ Abstraction ko nên phụ thuộc vào các chi tiết mà ngược lại
+- Có 2 loại inject
+	+ Constructor based injection :  inject bằng constructor 
+	+ Setter based injection : inject bằng setter 
+
+7.Spring bean là gì? có bao nhiêu loại scope, default là gì?
+- Bean là một đối tượng được khởi tạo ,xây dựng và được quản lý bởi IoC Container hay có thể bảo là bean là module chính của chương trình tạo ra bởi Spring IoC container  	
+8.các loại join trong SQL? lấy ví dụ cụ thể về Left join? 	
+- inner join
+- left join
+- right join
+- full outer join 
+
+9.khái niệm index trong SQL? có bao nhiêu loại index 	
+-là bảng tra cứu đặc biệt mà công cụ truy xuất có thể sử dụng để tăng hiệu suất tìm kiếm , liên hệ với quyền sách,  index giống như mục lục giúp mình tìm kiến nhanh hơn , nếu ko sử dụng index thì tìm từng trang từng chữ một.
+
+10.phân biệt Session và Cookie trong Servlet 
+
+Cookie	Session session là gì session là gì
+Cookie được lưu trữ trên trình duyệt của người dùng.	Session không được lưu trữ trên trình duyệt.
+Dữ liệu cookie được lưu trữ ở phía client.	Dữ liệu session được lưu trữ ở phía server.
+Dữ liệu cookie dễ dàng sửa đổi hoặc đánh cắp khi chúng được lưu trữ ở phía client.	Dữ liệu session không dễ dàng sửa đổi vì chúng được lưu trữ ở phía máy chủ.
+Dữ liệu cookie có sẵn trong trình duyệt đến khi expired.	Sau khi đóng trình duyệt sẽ hết phiên làm việc (session)
+11.
+------------------------------------------------
+
+
+
+Rest - Restful api
+Có thể nói bản thân REST là một kiểu mẫu kiến trúc viết API/Web service (architecture pattern). Nó sử dụng phương thức HTTP đơn giản để tạo cho giao tiếp giữa các máy. Vì vậy, thay vì sử dụng một URL cho việc xử lý một số thông tin người dùng, REST gửi một yêu cầu HTTP như GET, POST, DELETE, vv đến một URL để xử lý dữ liệu.
+
+RESTful API là một tiêu chuẩn dùng trong việc thiết kế API cho các ứng dụng web (thiết kế Web services) để tiện cho việc quản lý các resource. Nó chú trọng vào tài nguyên hệ thống (tệp văn bản, ảnh, âm thanh, video, hoặc dữ liệu động…), bao gồm các trạng thái tài nguyên được định dạng và được truyền tải qua HTTP.
+
+API (Application Programming Interface) là một tập các quy tắc và cơ chế mà theo đó, một ứng dụng hay một thành phần sẽ tương tác với một ứng dụng hay thành phần khác. API có thể trả về dữ liệu mà bạn cần cho ứng dụng của mình ở những kiểu dữ liệu phổ biến như JSON hay XML.
+
+REST (REpresentational State Transfer) là một dạng chuyển đổi cấu trúc dữ liệu, một kiểu kiến trúc để viết API. Nó sử dụng phương thức HTTP đơn giản để tạo cho giao tiếp giữa các máy. Vì vậy, thay vì sử dụng một URL cho việc xử lý một số thông tin người dùng, REST gửi một yêu cầu HTTP như GET, POST, DELETE, vv đến một URL để xử lý dữ liệu.
+
+RESTful API là một tiêu chuẩn dùng trong việc thiết kế các API cho các ứng dụng web để quản lý các resource. RESTful là một trong những kiểu thiết kế API được sử dụng phổ biến ngày nay để cho các ứng dụng (web, mobile…) khác nhau giao tiếp với nhau.
+
+Chức năng quan trọng nhất của REST là quy định cách sử dụng các HTTP method (như GET, POST, PUT, DELETE…) và cách định dạng các URL cho ứng dụng web để quản các resource. RESTful không quy định logic code ứng dụng và không giới hạn bởi ngôn ngữ lập trình ứng dụng, bất kỳ ngôn ngữ hoặc framework nào cũng có thể sử dụng để thiết kế một RESTful API.
+
+HOẠT ĐỘNG:
+
+REST hoạt động chủ yếu dựa vào giao thức HTTP
+Những phương thức hay hoạt động này thường được gọi là CRUD
+
+
+
+
+
+Quan hệ các entity:
+
+@GeneratedValue(strategy = GenerationType.AUTO) : Đây là annotation để mình tăng tự động thứ tự các dòng trong table.
+
+@OneToOne để nói rằng một user chỉ có 1 đối tượng Address (quan hệ 1-1)
+
+cascade = CascadeType.ALL nghĩa là khi xóa một dòng dữ liệu trong table Address. Thì bên bản User cũng sẽ bị xoá 1 dòng tương ứng với dòng bị xóa bên table User. Như vậy dữ liệu ở 2 table User và Address dữ liệu sẽ giống nhau. Mục đích của Cascade là để toàn vẹn dữ liệu, dữ liệu sẽ thống nhất ở 2 bảng,tránh thừa dữ liệu không cần thiết.
+
+@JoinColumn để cấu hình cho biến address là tìm kiếm trong column nào trong database mà map vào (nó chính là foreign key). 
+@JoinColumn giống như một cầu nối nơi 2 tables User và Address. Nó được dùng để khai báo 2 tables sẽ kết nối mối quan hệ với nhau thông qua column nào.
+
++@OneToMany
+
+Trong giỏ hàng (cart) sẽ chứa nhiều sản phẩm (Items)
+Column cart_id là khóa chính trong bảng Cart và là khóa phụ trong bảng Items.
+
++@ManyToMany
+
+
+PHÂN BIỆT POST GET
+post	get
+Dữ liệu được gửi đi với METHOD POST thì không hiển thị trên thanh URL.
+	Dữ liệu của phương thức này gửi đi thì hiện trên thanh địa chỉ (URL) của trình duyệt
+
+HTTP POST không giới hạn dữ liệu gửi đi
+	HTTP GET không được sử dụng nếu trong form có các dữ liệu nhạy cảm như là password, tài khoản ngân hàng
+	HTTP GET bị giới hạn số trường độ dài data gửi đi
+
+	Dữ liệu được gửi tường minh, chúng ta có thể nhìn thấy trên URL, đây là lý do khiến nó không bảo mật so với POST.
+
+	GET thực thi nhanh hơn POST vì những dữ liệu gủi đi luôn được webbrowser cached lại.
+
+Khi dùng phương thức POST thì server luôn thực thi và trả về kết quả cho client, còn phương thức GET ứng với cùng một yêu cầu đó webbrowser sẽ xem trong cached có kết quả tương ứng với yêu cầu đó không và trả về ngay không cần phải thực thi các yêu cầu đó ở phía server.
+	
+
+
+PHÂN BIỆT POST PUT
+
+POST 	PUT	
+để tạo dữ liệu 
+	để cập nhật lại dữ liệu	Thông thuòng là thế, put vẫn tạo đc dữ liệu và post cx thế
+POST thì chúng ta submit quá nhiều lần thì có thể nó sẽ cho ra những kết quả khác nhau.
+	PUT chính là phương thức bảo toàn dữ liệu nên khi chúng ta ấn submit bao nhiêu lần đi chăng nữa thì dữ liệu cũng chỉ tính như chúng ta submit 1 lần	
+POST method được dùng để gửi các request kèm theo một entity đến server yêu cầu tạo một tài nguyên mới dựa trên entity được cung cấp
+	PUT method nên kèm theo một định danh (thường là ID) cùng với một entity. Nếu một tài nguyên được tìm thấy bởi mã định danh kèm theo thì tài nguyên này sẽ được thay thế bởi các giá trị trong entity kèm theo. Ngược lại, PUT method sẽ tạo một tài nguyên dựa trên entity đã cung cấp.
+
+	
+òn với POST thì việc chúng ta thực thi nhiều lần với cùng một enity thì nó sẽ tạo ra nhiều tài nguyên ở phía server có giá trị tương tự nhau
+	gọi PUT method nhiều lần thì sẽ nó tạo hoặc cập nhật cùng một tài nguyên (dựa vào mã định danh)
+	
+
+
+PHÂN BIỆT PUT PATCH:
+
+
+PUT	PATCH
+PUT để Update chúng ta phải tạo ra một bản ghi đầy đủ các field để yêu cầu cập nhật và nó sẽ thực hiện ghi đè nên các field đã tồn tại.	Cũng giống như PUT, PATCH được dùng để thay đổi data thế nhưng nó chỉ thay đổi những field được yêu cầu thay đổi thay vì toàn bộ resource
+PUT cũng có thể giống như POST - tạo ra một resource mới nếu như nó không tồn tại
+	không thể dùng method PATCH cho một resource không tồn tại như PUT (Kết quả sẽ trả về FAIL và không có resource mới được tạo ra)
+
+
+
+
+
+
